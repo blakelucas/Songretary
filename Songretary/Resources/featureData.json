@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Lesson",
+        "id": 1,
+        "imageName": "book",
+        "description": "Learn a piece"
+        },
+    {
+        "name": "Transcriber",
+        "id": 2,
+        "imageName": "mic",
+        "description": "Let Songretary transcribe your music"
+        },
+    {
+        "name": "Tuner",
+        "id": 3,
+        "imageName": "guitar",
+        "description": "Check your pitch"
+        },
+    {
+        "name": "Metronome",
+        "id": 4,
+        "imageName": "metronome",
+        "description": "Set a beat"
+    }
+]
