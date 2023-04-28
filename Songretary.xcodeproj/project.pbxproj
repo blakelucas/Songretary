@@ -28,6 +28,8 @@
 		8D1852412989930200C3022C /* FeatureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1852402989930200C3022C /* FeatureList.swift */; };
 		8D1852432989941C00C3022C /* FeatureDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1852422989941C00C3022C /* FeatureDetail.swift */; };
 		8D2DF0442992F64600317A61 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8D2DF0432992F64600317A61 /* AudioKit */; };
+		8D557B8829FC402700CB80EC /* 4channel_150.mid in Resources */ = {isa = PBXBuildFile; fileRef = 8D557B8729FC402700CB80EC /* 4channel_150.mid */; };
+		8D557B8A29FC403700CB80EC /* blick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8D557B8929FC403700CB80EC /* blick.wav */; };
 		8D5F970129FB36DF00840275 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F970029FB36DF00840275 /* Metronome.swift */; };
 		8D9B198B2996FB11001883D8 /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9B198A2996FB11001883D8 /* AudioKitEX */; };
 		8D9B198D2996FCB4001883D8 /* Frequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9B198C2996FCB4001883D8 /* Frequency.swift */; };
@@ -59,6 +61,8 @@
 		8D18523E298990E400C3022C /* FeatureRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureRow.swift; sourceTree = "<group>"; };
 		8D1852402989930200C3022C /* FeatureList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureList.swift; sourceTree = "<group>"; };
 		8D1852422989941C00C3022C /* FeatureDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureDetail.swift; sourceTree = "<group>"; };
+		8D557B8729FC402700CB80EC /* 4channel_150.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = 4channel_150.mid; path = Songretary/Assets.xcassets/4channel_150.dataset/4channel_150.mid; sourceTree = SOURCE_ROOT; };
+		8D557B8929FC403700CB80EC /* blick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = blick.wav; path = Songretary/Assets.xcassets/blick.dataset/blick.wav; sourceTree = SOURCE_ROOT; };
 		8D5F970029FB36DF00840275 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
 		8D9B198C2996FCB4001883D8 /* Frequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frequency.swift; sourceTree = "<group>"; };
 		8DA6B5D82997072500BC3EE3 /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
@@ -107,8 +111,8 @@
 				8D18523B29898FA000C3022C /* Model */,
 				8D18523D29898FBF00C3022C /* Resources */,
 				8D18521D2989832400C3022C /* SongretaryApp.swift */,
-				8D1852212989832600C3022C /* Assets.xcassets */,
 				8D1852262989832600C3022C /* Persistence.swift */,
+				8D1852212989832600C3022C /* Assets.xcassets */,
 				8D1852282989832600C3022C /* Songretary.xcdatamodeld */,
 				8D1852232989832600C3022C /* Preview Content */,
 			);
@@ -157,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				8D18523429898B2F00C3022C /* featureData.json */,
+				8D557B8729FC402700CB80EC /* 4channel_150.mid */,
+				8D557B8929FC403700CB80EC /* blick.wav */,
 				6043EB0F29EF1A9A00A398FA /* TutorialText.md */,
 				6043EB1129F8579900A398FA /* ApproachText.md */,
 			);
@@ -247,9 +253,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D557B8829FC402700CB80EC /* 4channel_150.mid in Resources */,
 				6043EB1229F857C000A398FA /* ApproachText.md in Resources */,
 				6043EB1029F855EF00A398FA /* TutorialText.md in Resources */,
 				8D1852252989832600C3022C /* Preview Assets.xcassets in Resources */,
+				8D557B8A29FC403700CB80EC /* blick.wav in Resources */,
 				8D1852222989832600C3022C /* Assets.xcassets in Resources */,
 				8D18523529898B2F00C3022C /* featureData.json in Resources */,
 			);
