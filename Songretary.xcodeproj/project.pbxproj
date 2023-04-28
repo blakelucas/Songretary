@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6043EB0629D3662F00A398FA /* 4channel_150.mid in Resources */ = {isa = PBXBuildFile; fileRef = 6043EB0529D3662F00A398FA /* 4channel_150.mid */; };
-		6043EB0829D3663600A398FA /* blick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6043EB0729D3663600A398FA /* blick.wav */; };
-		6043EB0A29DCB0A600A398FA /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6043EB0929DCB0A600A398FA /* Metronome.swift */; };
 		6043EB0C29DCB62900A398FA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6043EB0B29DCB62900A398FA /* HomeView.swift */; };
 		6043EB1029F855EF00A398FA /* TutorialText.md in Resources */ = {isa = PBXBuildFile; fileRef = 6043EB0F29EF1A9A00A398FA /* TutorialText.md */; };
 		6043EB1229F857C000A398FA /* ApproachText.md in Resources */ = {isa = PBXBuildFile; fileRef = 6043EB1129F8579900A398FA /* ApproachText.md */; };
@@ -17,7 +14,6 @@
 		606942DE29CA4EB600E639EB /* Tuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606942DD29CA4EB600E639EB /* Tuner.swift */; };
 		6075462229CA6FC000B0FC6E /* TuningForkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6075462129CA6FC000B0FC6E /* TuningForkView.swift */; };
 		6075462429CA721C00B0FC6E /* TunerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6075462329CA721C00B0FC6E /* TunerView.swift */; };
-		6075462629CA726300B0FC6E /* MetronomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6075462529CA726300B0FC6E /* MetronomeView.swift */; };
 		8D0FA2ED29AE993E00A25BAB /* TuningFork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0FA2EB29AE993E00A25BAB /* TuningFork.swift */; };
 		8D18521E2989832400C3022C /* SongretaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18521D2989832400C3022C /* SongretaryApp.swift */; };
 		8D1852202989832400C3022C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18521F2989832400C3022C /* ContentView.swift */; };
@@ -32,17 +28,16 @@
 		8D1852412989930200C3022C /* FeatureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1852402989930200C3022C /* FeatureList.swift */; };
 		8D1852432989941C00C3022C /* FeatureDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1852422989941C00C3022C /* FeatureDetail.swift */; };
 		8D2DF0442992F64600317A61 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8D2DF0432992F64600317A61 /* AudioKit */; };
+		8D5F970129FB36DF00840275 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F970029FB36DF00840275 /* Metronome.swift */; };
 		8D9B198B2996FB11001883D8 /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = 8D9B198A2996FB11001883D8 /* AudioKitEX */; };
 		8D9B198D2996FCB4001883D8 /* Frequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9B198C2996FCB4001883D8 /* Frequency.swift */; };
 		8DA6B5D52997048400BC3EE3 /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8DA6B5D42997048400BC3EE3 /* AudioKitUI */; };
 		8DA6B5D92997072500BC3EE3 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA6B5D82997072500BC3EE3 /* Recorder.swift */; };
 		8DA6B5DC2997074900BC3EE3 /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DA6B5DB2997074900BC3EE3 /* SoundpipeAudioKit */; };
+		8DC9CC6E29F9834D00F38C69 /* Transposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9CC6D29F9834D00F38C69 /* Transposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6043EB0529D3662F00A398FA /* 4channel_150.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = 4channel_150.mid; path = ../../../../Desktop/4channel_150.mid; sourceTree = "<group>"; };
-		6043EB0729D3663600A398FA /* blick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = blick.wav; path = ../../../../Desktop/blick.wav; sourceTree = "<group>"; };
-		6043EB0929DCB0A600A398FA /* Metronome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Metronome.swift; path = ../../../../Desktop/Metronome.swift; sourceTree = "<group>"; };
 		6043EB0B29DCB62900A398FA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6043EB0F29EF1A9A00A398FA /* TutorialText.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TutorialText.md; sourceTree = "<group>"; };
 		6043EB1129F8579900A398FA /* ApproachText.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ApproachText.md; sourceTree = "<group>"; };
@@ -50,7 +45,6 @@
 		606942DD29CA4EB600E639EB /* Tuner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tuner.swift; sourceTree = "<group>"; };
 		6075462129CA6FC000B0FC6E /* TuningForkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuningForkView.swift; sourceTree = "<group>"; };
 		6075462329CA721C00B0FC6E /* TunerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerView.swift; sourceTree = "<group>"; };
-		6075462529CA726300B0FC6E /* MetronomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeView.swift; sourceTree = "<group>"; };
 		8D0FA2EB29AE993E00A25BAB /* TuningFork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuningFork.swift; sourceTree = "<group>"; };
 		8D18521A2989832400C3022C /* Songretary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Songretary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D18521D2989832400C3022C /* SongretaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongretaryApp.swift; sourceTree = "<group>"; };
@@ -65,9 +59,11 @@
 		8D18523E298990E400C3022C /* FeatureRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureRow.swift; sourceTree = "<group>"; };
 		8D1852402989930200C3022C /* FeatureList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureList.swift; sourceTree = "<group>"; };
 		8D1852422989941C00C3022C /* FeatureDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureDetail.swift; sourceTree = "<group>"; };
+		8D5F970029FB36DF00840275 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
 		8D9B198C2996FCB4001883D8 /* Frequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frequency.swift; sourceTree = "<group>"; };
 		8DA6B5D82997072500BC3EE3 /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		8DA6B5DF29970DD600BC3EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DC9CC6D29F9834D00F38C69 /* Transposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,15 +81,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6043EB0429D3661400A398FA /* Sound Files */ = {
-			isa = PBXGroup;
-			children = (
-				6043EB0729D3663600A398FA /* blick.wav */,
-				6043EB0529D3662F00A398FA /* 4channel_150.mid */,
-			);
-			path = "Sound Files";
-			sourceTree = "<group>";
-		};
 		8D1852112989832400C3022C = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +102,6 @@
 		8D18521C2989832400C3022C /* Songretary */ = {
 			isa = PBXGroup;
 			children = (
-				6043EB0429D3661400A398FA /* Sound Files */,
 				8DA6B5DF29970DD600BC3EE3 /* Info.plist */,
 				8D18523A29898F9800C3022C /* Views */,
 				8D18523B29898FA000C3022C /* Model */,
@@ -146,7 +132,6 @@
 				8D1852422989941C00C3022C /* FeatureDetail.swift */,
 				6075462129CA6FC000B0FC6E /* TuningForkView.swift */,
 				6075462329CA721C00B0FC6E /* TunerView.swift */,
-				6075462529CA726300B0FC6E /* MetronomeView.swift */,
 				6043EB0B29DCB62900A398FA /* HomeView.swift */,
 				6043EB1329F85CE500A398FA /* SettingsView.swift */,
 			);
@@ -157,9 +142,10 @@
 			isa = PBXGroup;
 			children = (
 				606942DD29CA4EB600E639EB /* Tuner.swift */,
+				8D5F970029FB36DF00840275 /* Metronome.swift */,
 				8D18523629898B4500C3022C /* Feature.swift */,
-				6043EB0929DCB0A600A398FA /* Metronome.swift */,
 				8D0FA2EB29AE993E00A25BAB /* TuningFork.swift */,
+				8DC9CC6D29F9834D00F38C69 /* Transposer.swift */,
 				8DA6B5D82997072500BC3EE3 /* Recorder.swift */,
 				8D18523829898DFB00C3022C /* ModelData.swift */,
 				8D9B198C2996FCB4001883D8 /* Frequency.swift */,
@@ -263,10 +249,8 @@
 			files = (
 				6043EB1229F857C000A398FA /* ApproachText.md in Resources */,
 				6043EB1029F855EF00A398FA /* TutorialText.md in Resources */,
-				6043EB0829D3663600A398FA /* blick.wav in Resources */,
 				8D1852252989832600C3022C /* Preview Assets.xcassets in Resources */,
 				8D1852222989832600C3022C /* Assets.xcassets in Resources */,
-				6043EB0629D3662F00A398FA /* 4channel_150.mid in Resources */,
 				8D18523529898B2F00C3022C /* featureData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,14 +262,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6043EB0A29DCB0A600A398FA /* Metronome.swift in Sources */,
+				8D5F970129FB36DF00840275 /* Metronome.swift in Sources */,
 				606942DE29CA4EB600E639EB /* Tuner.swift in Sources */,
 				8D18523729898B4500C3022C /* Feature.swift in Sources */,
 				8D0FA2ED29AE993E00A25BAB /* TuningFork.swift in Sources */,
-				6075462629CA726300B0FC6E /* MetronomeView.swift in Sources */,
 				8D1852272989832600C3022C /* Persistence.swift in Sources */,
 				8D1852202989832400C3022C /* ContentView.swift in Sources */,
 				6075462229CA6FC000B0FC6E /* TuningForkView.swift in Sources */,
+				8DC9CC6E29F9834D00F38C69 /* Transposer.swift in Sources */,
 				8DA6B5D92997072500BC3EE3 /* Recorder.swift in Sources */,
 				8D18521E2989832400C3022C /* SongretaryApp.swift in Sources */,
 				8D18523929898DFB00C3022C /* ModelData.swift in Sources */,
@@ -425,7 +409,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Songretary/Preview Content\"";
-				DEVELOPMENT_TEAM = 6JBJ9NDW9R;
+				DEVELOPMENT_TEAM = 4XM5R5KN5U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Songretary/Info.plist;
@@ -460,7 +444,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Songretary/Preview Content\"";
-				DEVELOPMENT_TEAM = 6JBJ9NDW9R;
+				DEVELOPMENT_TEAM = 4XM5R5KN5U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Songretary/Info.plist;

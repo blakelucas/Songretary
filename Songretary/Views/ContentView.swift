@@ -36,7 +36,7 @@ struct ContentView: View {
                 }
                 .tag(3)
                 .preferredColorScheme(isDarkMode ? .dark : .light)
-            Text("Transcribe")
+            TransposerView()
                 .onTapGesture {
                     selectedTab = 4
                 }
