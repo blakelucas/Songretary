@@ -1,3 +1,4 @@
+--current 1:26 5/2/23
 
 import AudioKit
 import AudioKitEX
@@ -48,7 +49,6 @@ struct TransposerData {
 
 class TransposerConductor: ObservableObject, HasAudioEngine {
     @Published var data = TransposerData()
-    
     var timer: Timer?
     let engine = AudioEngine()
     let initialDevice: Device
@@ -67,9 +67,9 @@ class TransposerConductor: ObservableObject, HasAudioEngine {
     
     
     
-    func printNotes()
+    func printNotes(bpm: Int)
     {
-        var noteListWithTiming = self.noteAggregate()
+        var noteListWithTiming = self.noteAggregate(bpm: bpm)
         if noteListWithTiming.isEmpty {
             print("No notes detected")
             return
@@ -128,9 +128,9 @@ class TransposerConductor: ObservableObject, HasAudioEngine {
         data.currLine = 0
     }
     
-    func noteAggregate() -> [Notel]
+    func noteAggregate(bpm: Int) -> [Notel]
     {
-        
+        let b = Double(bpm)
         var noteList = [Notel]()
         var tempList = [Note]()
         if self.data.notes.isEmpty {
@@ -159,19 +159,19 @@ class TransposerConductor: ObservableObject, HasAudioEngine {
         var c = 0
         for note in tempList {
             let noteLengthInSeconds = note.time // Replace this with the actual length of the note in seconds
+            let quarterNoteDuration = 60000/b
             
-            let wholeNoteDuration = 4000.00 // In seconds
-            let halfNoteDuration = 2000.00 // In seconds
-            let quarterNoteDuration = 1000.00 // In seconds
-            let eighthNoteDuration = 500.00 // In seconds
+            let wholeNoteDuration = 4 * quarterNoteDuration // In seconds
+            let halfNoteDuration = 2 * quarterNoteDuration // In seconds
+            let eighthNoteDuration = (1/2) * quarterNoteDuration // In seconds
             _ = 250.00 // In seconds
             
-            var xp = 15.0
+            var xp = 40.0
             var yp = -12.0
             if (c == 0) {
-                xp = 15.0
+                xp = 40.0
             }
-            else if (c < 14) {
+            else if (c < 13) {
                 xp = noteList.last!.xpos + 25
             }
             else {
@@ -191,52 +191,52 @@ class TransposerConductor: ObservableObject, HasAudioEngine {
                 switch note.letter.first! {
                 case "A":
                     if digit == 5 {
-                        yp = -17.0 + Double(69 * data.currLine)
+                        yp = -15 + Double(69 * data.currLine)
                     }
                     else {
-                        yp = 23 + Double(69 * data.currLine)
+                        yp = 27 + Double(69 * data.currLine)
                     }
                 case "B":
                     if digit == 5 {
-                        yp = -23 + Double(69 * data.currLine)
+                        yp = -21 + Double(69 * data.currLine)
                     }
                     else {
-                        yp = 17 + Double(69 * data.currLine)
+                        yp = 21 + Double(69 * data.currLine)
                     }
                 case "C":
-                    if digit == 5 {
-                        yp = 10 + Double(69 * data.currLine)
-                    }
-                    else {
-                        yp = 50 + Double(69 * data.currLine)
-                    }
-                case "D":
-                    if digit == 0 {
-                        yp = 5 + Double(69 * data.currLine)
-                    }
-                    else {
-                        yp = 45 + Double(69 * data.currLine)
-                    }
-                case "E":
-                    if digit == 5 {
-                        yp = 0 + Double(69 * data.currLine)
-                    }
-                    else {
-                        yp = 40 + Double(69 * data.currLine)
-                    }
-                case "F":
-                    if digit == 5 {
-                        yp = -5 + Double(69 * data.currLine)
-                    }
-                    else {
-                        yp = 35 + Double(69 * data.currLine)
-                    }
-                case "G":
                     if digit == 5 {
                         yp = 12 + Double(69 * data.currLine)
                     }
                     else {
-                        yp = 28 + Double((69 * data.currLine))
+                        yp = 56 + Double(69 * data.currLine)
+                    }
+                case "D":
+                    if digit == 5 {
+                        yp = 9 + Double(69 * data.currLine)
+                    }
+                    else {
+                        yp = 51 + Double(69 * data.currLine)
+                    }
+                case "E":
+                    if digit == 5 {
+                        yp = 3 + Double(69 * data.currLine)
+                    }
+                    else {
+                        yp = 46 + Double(69 * data.currLine)
+                    }
+                case "F":
+                    if digit == 5 {
+                        yp = -3 + Double(69 * data.currLine)
+                    }
+                    else {
+                        yp = 40 + Double(69 * data.currLine)
+                    }
+                case "G":
+                    if digit == 5 {
+                        yp = -7.5 + Double(69 * data.currLine)
+                    }
+                    else {
+                        yp = 34 + Double((69 * data.currLine))
                     }
                 default:
                     print(1)
@@ -284,7 +284,7 @@ class TransposerConductor: ObservableObject, HasAudioEngine {
                     noteList.append(Notel(letter: note.letter, type: "rest sixteenth", xpos: xp, ypos: 35 + Double(69 * data.currLine)))
                 }
             }
-            print(note.letter, xp, yp)
+            print(note.letter, xp, yp, b)
         }
         return noteList
     }
@@ -338,7 +338,8 @@ class TransposerConductor: ObservableObject, HasAudioEngine {
 
 
 struct TransposerView: View {
-    
+    let bpmRange = 80...120
+    @State public var selectedBPM = 88
     @StateObject var conductor = TransposerConductor()
     @State private var resetCount = 0
     var body: some View {
@@ -351,7 +352,14 @@ struct TransposerView: View {
                         conductor.resetData()
                         conductor.stop()
                     }
-                    Spacer()
+                Spacer()
+                Text("BPM:").foregroundColor(.blue)
+                Picker("", selection: $selectedBPM) {
+                    ForEach(bpmRange, id: \.self) { bpm in
+                        Text("\(bpm)")
+                    }
+                }
+                Spacer()
                 Text(conductor.data.isRecording ? "STOP RECORDING" : "RECORD")
                     .foregroundColor(.blue)
                     .onTapGesture {
@@ -364,7 +372,7 @@ struct TransposerView: View {
                         else {
                             resetCount = 0
 
-                            conductor.printNotes()
+                            conductor.printNotes(bpm: selectedBPM)
                             //conductor.start()
                             conductor.stop()
                         }
@@ -372,12 +380,11 @@ struct TransposerView: View {
             }
             ZStack {
                 StaveView()
-
                 if resetCount == 0 {
                     ForEach(conductor.data.noteL, id: \.self) { note in
                         Image(note.type)
                             .position(x: note.xpos, y: note.ypos)
-
+                        
                     }
                 }
             }
@@ -397,13 +404,10 @@ struct StaveView: View {
             Image("stave5")
                 .resizable(resizingMode: .tile)
                 .frame(maxWidth: .infinity)
-            
-       
             Image("treble2").position(x: 30, y: 39.5)
-
-            
         }
+        .frame(maxHeight: 625)
     }
-    
 }
+    
 
