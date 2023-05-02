@@ -44,6 +44,7 @@ struct ContentView: View {
                     Label("Transcribe", systemImage: "pencil")
                 }
                 .tag(4)
+                .preferredColorScheme(.light)
             SettingsView()
                 .onTapGesture {
                     selectedTab = 5
@@ -55,6 +56,8 @@ struct ContentView: View {
         }
     }
 }
+
+
 
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {

@@ -336,7 +336,9 @@ class TransposerConductor: ObservableObject, HasAudioEngine {
 }
     
 
+
 struct TransposerView: View {
+    
     @StateObject var conductor = TransposerConductor()
     @State private var resetCount = 0
     var body: some View {
@@ -356,14 +358,14 @@ struct TransposerView: View {
                         conductor.data.isRecording.toggle()
                         if (conductor.data.isRecording) {
                             conductor.data.recordingStartDate = (Date().timeIntervalSince1970 * 1000)
-                            conductor.stop()
+                            //conductor.stop()
                             conductor.start()
                         }
                         else {
                             resetCount = 0
 
                             conductor.printNotes()
-                            conductor.start()
+                            //conductor.start()
                             conductor.stop()
                         }
                     }
@@ -383,13 +385,11 @@ struct TransposerView: View {
         }
         .padding()
         .onDisappear {
-            conductor.start()
             resetCount = 1
             conductor.stop()
         }
     }
 }
-
 
 struct StaveView: View {
     var body: some View {

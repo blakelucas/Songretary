@@ -130,7 +130,7 @@ struct MetronomeView: View {
             conductor.start()
         }
         .onDisappear {
-            conductor.stop()
+           // conductor.stop()
         }
     }
 }
