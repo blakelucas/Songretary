@@ -1,3 +1,3 @@
-Here is a brief description of our approach to our project. There is something weird going on with the spacing. This is extra text to test the spacing.
+Songretary was built over the course of January 2023 to May 2023 as a final Capstone project. None of us had dabbled in iOS development, so this project was a good way for us to learn this avenue of development. 
 
-Here is a little bit about our approach. This will include what each creator contributed to the project. This will also go into the technology/formulas, credits for libraries (AudioKit), and other things pertaining to the creation of this project.
+Each of us developed one of the functions of the application, with Blake developing the Tuner, Phillip developing the Metronome, and Darian doing the Transcriber. Each of us tweaked portions of the UI.

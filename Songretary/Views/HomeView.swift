@@ -17,13 +17,14 @@ struct HomeView: View {
                                       contentsOf: filepath1!,
                                       options: AttributedString.MarkdownParsingOptions(
                                             interpretedSyntax: .inlineOnlyPreservingWhitespace
-                                        )))
+                                      ))).padding(.top, 1)
                 Text("**Approach**").font(.title).padding(.top, 5)
                 Text(try! AttributedString(
                                       contentsOf: filepath2!,
                                       options: AttributedString.MarkdownParsingOptions(
                                             interpretedSyntax: .inlineOnlyPreservingWhitespace
-                                        )))
+                                      ))).padding(.top, 1)
+                Text("**Credits**: AudioKit")
                 Text("**Contact Us**").font(.title).padding(.top, 5)
                 Text("**Blake Lucas**\n  Mobile: (336)202-9525\n  Email: blucas9898@gmail.com").padding(.top, 2)
                 Text("**Darian Silvers**\n  Mobile: (828)260-9163\n  Email: dariansilvers@gmail.com").padding(.top, 2)
